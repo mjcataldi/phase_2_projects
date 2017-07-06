@@ -1,0 +1,9 @@
+<ul class="header">
+  <% if !logged_in? %>
+    <li class="header"><a href="/login">Login</a></li>
+    <li class="header"><a href="/register">Register</a></li>
+  <% else %>
+    <li class="header"><a href="/logout">Logout</a></li>
+    <li class="header"><a href="/contacts/<%= session[:contact_id] %>">Profile</a></li>
+  <% end %>
+</ul>

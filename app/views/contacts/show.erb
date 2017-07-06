@@ -1,0 +1,31 @@
+<div class="col-sm-6 col-sm-offset-3">
+<h1>Contact Information</h1>
+
+  <table class="table table-hover table-condensed">
+    <tr><td>First Name</td><td><%= @contact.first_name %></td></tr>
+    <tr><td>Last Name</td><td><%= @contact.last_name %></td></tr>
+    <tr><td>Email</td><td><a href="mailto:<%= @contact.email %>"><%= @contact.email %></a></td></tr>
+  </table>
+
+<% if @contact.dogs.count > 0 %>
+  <hr>
+  <h2>My Dogs</h2>
+
+    <table class="table table-hover table-condensed">
+      <% @contact.dogs.each do |dog| %>
+        <tr><td><a href="/dogs/<%= dog.id %>"><%= dog.name %></a></td></tr>
+      <% end %>
+    </table>
+<% end %>
+
+<% if @contact.photos.count > 0 %>
+  <hr>
+  <h2>Photos</h2>
+
+  <ul>
+  <% @contact.photos.each do |photo| %>
+    <li><%= photo.name %></li>
+  <% end %>
+  </ul>
+<% end %>
+</div>

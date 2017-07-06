@@ -1,0 +1,7 @@
+<div class="col-sm-6 col-sm-offset-3">
+  <h1>Edit Contact</h1>
+  <form action="/contacts/<%= @contact.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <%= erb :"contacts/_form_fields", layout: false %>
+  </form>
+</div>

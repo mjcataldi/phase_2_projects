@@ -1,0 +1,10 @@
+<nav>
+  <ul class="header">
+    <li class="header"><a href="/">Home</a></li>
+    <% if logged_in? %>
+      <li class="header"><a href="/contacts">Contacts</a></li>
+      <li class="header"><a href="/dogs">Dogs</a></li>
+      <li class="header"><a href="/photos">Photos</a></li>
+    <% end %>
+  </ul>
+</nav>

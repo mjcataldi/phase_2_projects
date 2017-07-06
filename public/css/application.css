@@ -1,0 +1,5 @@
+.header ul, .header li{
+  display: inline;
+  list-style-type: none;
+  padding: 0 25px;
+}
