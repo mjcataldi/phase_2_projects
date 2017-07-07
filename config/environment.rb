@@ -14,7 +14,6 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
-# Put the bcrypt here instead of the Contact class file
 require 'bcrypt'
 
 require 'sinatra'
